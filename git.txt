@@ -3,3 +3,7 @@ add a file to git => git add <fileName>
 status => git status
 commit => git commit
 push to server => git push 
+
+
+config user => git config --global user.name <name>
+git config --global user.email <email>
