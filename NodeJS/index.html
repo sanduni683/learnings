@@ -2,17 +2,38 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
     <meta charset="UTF-8">
+    <!--this '!important' makes more important than el.style object-->
+    <style>
+        #style {
+            background: blue;
+            color: darkmagenta !important;
+            width: 100px;
+            height: 100px
+        }
+    </style>
     <title>JavaScript Baasic Learnings</title>
 </head>
 
 <body>
     <h1>JavaScript Baasic Learnings</h1>
+    <h2 id="style">Style me</h2>
     <p id="para1">Welcome to vehicle service 1 at De silva Service ...!</p>
     <p id="para2">Welcome to vehicle service 2 at De silva Service ...!</p>
     <button type="button">Try it</button>
-    <script src="basicLearnings.js"></script>
+    <select name="cars">
+        <option value="volvo">volvo</option>
+        <option value="benz">benz</option>
+        <option value="toyota">toyota</option>
+        <option value="bmw">bmw </option>
+    </select>
+    <div id="yellow" style="background: yellow; width: 200px; height: 20px"></div>
+    <div id="blue" style="background: blue; width: 200px; height: 20px"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./showbackenddata.js"></script>
+    <script src="./domelements.js"></script>
+    <script src="./eventhandlers.js"></script>
+    <script src="./createelement.js"></script>
 </body>
 
 </html>
