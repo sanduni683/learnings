@@ -4,7 +4,7 @@ status => git status
 commit => git commit
 push to server => git push 
 
-
+//Change globalyusername and email.if want to change only for current repository use without global
 config user => git config --global user.name <name>
 git config --global user.email <email>
 
