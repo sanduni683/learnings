@@ -1,15 +1,18 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import ClassBasedComponent from './ComponentsBasic/ClassBasedComponent';
+import FunctionalComponentWithHookState from './ComponentsBasic/FunctionalComponentWithHookState';
+import AppAssignmentOne from './AssignmentOne/AppAssignmentOne';
 
-function App()
+class App extends Component
 {
-  return (
-    <div className="App">
-      <header>
-        <h1>Hi, I'm a react app</h1>
-      </header>
-    </div>
-  );
+  render()
+  {
+    return (
+      <div>
+        <FunctionalComponentWithHookState />
+      </div>
+    );
+  }
 }
 
 export default App;

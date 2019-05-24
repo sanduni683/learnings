@@ -1,0 +1,16 @@
+.DisplayList {
+      background-color: "red";
+       font-size: "50px";
+       display: flex;
+       justify-content: center;
+       color: green;
+}
+
+.UserOutput {
+    width: 40%;
+    border : 1px solid green;
+    margin: 16px auto;
+    padding: 16px;
+    text-align: center;
+}
+
