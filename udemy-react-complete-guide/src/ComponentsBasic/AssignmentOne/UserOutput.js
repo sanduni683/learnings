@@ -1,5 +1,4 @@
 import React from 'react';
-import AssignmentOneStyle from './AssignmentOneStyle.css'
 
 const UserOutput = ( props ) =>
 {
