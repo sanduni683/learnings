@@ -1,8 +1,16 @@
 .Person{
     width: 60%;
-    margin: 16px auto;
+    margin: 13px auto;
     border: 1px solid #0000FF;
     shadow: 0 2px, 3px, #ccc;
     padding: 16px;
     text-align: center;
 }
+
+/* media type queries ==> defines a stysheet for a particulr media type
+@media (min-width: 500px) {
+    .Person {
+        width:1850px;
+    }
+}
+*/

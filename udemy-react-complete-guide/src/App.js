@@ -5,6 +5,8 @@ import AppAssignmentOne from './ComponentsBasic/AssignmentOne/AppAssignmentOne';
 import CoditionalRendering from './ConditionalandListRendering/CoditionalRendering'
 import OutputtingListsFunctionmap from './ConditionalandListRendering/OutputtingListsFunctionmap'
 import AppAssignmentTwo from './ConditionalandListRendering/AssignmentTwo/AppAssignmentTwo'
+import StylesDynamically from './StylingComponentsandElements/StylesDynamically'
+import StylesCSSModules from './StylingComponentsandElements/StylesCSSModules'
 
 class App extends Component
 {
@@ -12,7 +14,7 @@ class App extends Component
   {
     return (
       <div>
-        <AppAssignmentTwo />
+        <StylesCSSModules />
       </div>
     );
   }
