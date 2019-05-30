@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import App from '../App.css'
+import App from '../../containers/App.css'
 import Person from '../Person/Person';
 
 //Statefull class components actually uses states using setState()

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import Person from '../Person/Person'
-import App from '../App.css'
+import '../../containers/App.css'
 
 class StylesDynamically extends Component
 {
@@ -73,7 +73,7 @@ class StylesDynamically extends Component
         // const classes = [ 'ClassRed', 'ClassBold' ].join( ' ' )
 
         //dynamically added and assigned classes (class names)        
-        const classes = []
+        let classes = []
         if ( this.state.persons.length <= 2 )
         {
             classes.push( 'ClassBold' ) // classes = ["ClassBold"]

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import App from '../App.css'
+import App from '../../containers/App.css'
 import Person from '../Person/Person';
-
 
 //Stateless functional components actually uses states after react 16.8+ with hooks, 
 //Hooks uses use keyword with like(useState(), useCallback(),useRef()) to change state.

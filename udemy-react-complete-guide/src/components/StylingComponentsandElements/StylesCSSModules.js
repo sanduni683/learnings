@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Child from '../Person/Child'
-import App from '../App.css'
+import '../../containers/App.css'
 
 class StylesCSSModules extends Component
 {
@@ -26,17 +26,34 @@ class StylesCSSModules extends Component
         this.setState( { childs: childs } )
     }
 
+    changePersonsHandler = ( event, childId ) =>
+    {
+        const childIndex = this.state.childs.findIndex( c =>
+        {
+            return c.id === childId
+        } )
+        const child = {
+            ...this.state.childs[ childIndex ]
+        }
+        child.name = event.target.value
+
+        const childs = [ ...this.state.childs ]
+        childs[ childIndex ] = child
+
+        this.setState( { childs: childs } )
+    }
+
     render()
     {
-        const style = {
+          const style = {
             backgroundColor: 'green',
             color: 'white',
             font: 'inherit',
             border: '1px solid blue',
             padding: '8px',
-            cursor: 'pointer'
+            cursor: 'pointer',
         }
-
+        
         let childs = null
         if ( this.state.showChilds )
         {
@@ -49,17 +66,18 @@ class StylesCSSModules extends Component
                             name={ child.name }
                             age={ child.age }
                             onDelete={ () => this.deleteChildsHandler( index ) }
+                            onChange={ ( event ) => this.changePersonsHandler( event, child.id ) }
                         />
                     } )
                     }
                 </div> )
+                style.backgroundColor = 'red';
         }
-
 
         return (
             <div className="App">
                 <p>Render Child elements from Child components</p>
-                <button style={ style } onClick={ this.toggleChildsHandler }>Show childs</button>
+                <button style={style} onClick={ this.toggleChildsHandler }>Show childs</button>
                 { childs }
             </div >
         );

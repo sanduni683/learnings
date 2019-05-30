@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import App from '../App.css'
-import Person from '../Person/Person';
+import App from '../../containers/App.css'
+import Persons from '../Person/Persons';
 
 class OutputtingListsFunctionmap extends Component
 {
@@ -78,18 +78,12 @@ class OutputtingListsFunctionmap extends Component
                     } ) }
                     */}
 
-                    {/*passing second argument index to the DeletePersonsHandler method(by binding index ) */ }
-                    { this.state.persons.map(( person, index ) =>
-                    {
-                        return <Person
-                            name={ person.name }
-                            age={ person.age }
-                            onDelete={ () => this.deletePersonsHandler( index ) }
-                            onChange={ ( event ) => this.changePersonsHandler( event, person.id ) }
-                            key={ person.id }
-                        />
-                    } ) }
-
+                    {/* Splitting an App into components->make another Persons.js file and import it and use it to make codes clear */ }
+                    <Persons
+                        persons={ this.state.persons }
+                        onDelete={ this.deletePersonsHandler }
+                        onChange={ this.changePersonsHandler }
+                    />
                 </div> );
         }
 
