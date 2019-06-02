@@ -102,7 +102,7 @@ const Cockpit = ( props ) =>
             </AuthContext.Consumer>
             */ }
 
-            <button style={ style } onClick={ this.authContext.login }>Log In</button>
+            <button style={ style } onClick={ authContext.login }>Log In</button>
             
         </div>
     );
