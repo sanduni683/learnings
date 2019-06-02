@@ -1,0 +1,55 @@
+.Child {
+    width: 60%;
+    margin: 13px auto;
+    border: 1px solid magenta;
+    shadow: 0 2px, 3px, #ccc;
+    padding: 16px;
+    text-align: center;
+}
+
+/* 
+  * media type queries ==> defines a stysheet for a particulr media type
+  * this is showing how css modules media queries
+ */
+@media (max-width: 500px) {
+    .Child {
+        width:150px;
+    }
+}
+
+.App {
+  text-align: center;
+  
+}
+
+.ClassRed{
+  color:gold;
+}
+
+.ClassBold{
+  font-weight: bold;
+}
+
+.App button {
+   background-color: green;
+   color: white;
+   font: inherit;
+   border: 1px solid yellow;
+   padding: 8px;
+   cursor: pointer;
+}
+
+.App button:hover{
+  background-color: lightgreen;
+  color: white;
+}
+
+.App button.ClassRed{
+  background-color: red;
+  color: white;
+}
+
+.App button.ClassRed:hover{
+  background-color:salmon;
+  color: white;
+}

@@ -3,7 +3,7 @@ import Person from './Person'
 
 const persons = ( props ) =>
 {
-    console.log( '[ComponentsLifecycleBasic] Child components(Persons.js) rendering' )
+    console.log( '[Persons.js] rendering' )
 
     return props.persons.map(( person, index ) =>
     {

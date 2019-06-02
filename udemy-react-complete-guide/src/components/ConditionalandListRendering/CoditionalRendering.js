@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import App from '../../containers/App.css'
 import Person from '../Person/Person';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 
 class CoditionalRendering extends Component
 {
@@ -35,18 +36,20 @@ class CoditionalRendering extends Component
         if ( this.state.showPersons )
         {
             persons = ( <div>
-                <Person
+                <ErrorBoundary key={ this.state.persons.name }><Person
                     name={ this.state.persons[ 0 ].name }
                     age={ this.state.persons[ 0 ].age }
-                />
-                <Person
+                /></ErrorBoundary>
+
+                <ErrorBoundary key={ this.state.persons.name }><Person
                     name={ this.state.persons[ 1 ].name }
                     age={ this.state.persons[ 1 ].age }
-                />
-                <Person
+                /></ErrorBoundary>
+
+                <ErrorBoundary key={ this.state.persons.name }><Person
                     name={ this.state.persons[ 2 ].name }
                     age={ this.state.persons[ 2 ].age }
-                />
+                /></ErrorBoundary>
             </div> );
         }
 
