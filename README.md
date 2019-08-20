@@ -14,4 +14,8 @@ config user => git config --global user.name <name>
 git config --global user.email <email>  
   
 
-//GIT VERSION CONTROL
+//GIT VERSION CONTROL  
+git stash --> save uncommited changes locally  
+git pull --> take remote changes to local repository  
+git push --> push local changes to remote repository  
+git stash apply --> get uncommited changes locally
