@@ -21,6 +21,7 @@ git push --> push local changes to remote repository
 git stash apply --> get uncommited changes locally  
 
 
+=================== Connect to database from Linux ============================================  
 
 
 
