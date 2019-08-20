@@ -1,7 +1,7 @@
 GitHub Settings ---------------------------------
 
-cloning a repo => git clone <url>
-add a file to git => git add <fileName>
+cloning a repo --> git clone <url>
+add a file to git --> git add <fileName>
 status => git status
 commit => git commit
 push to server => git push 
