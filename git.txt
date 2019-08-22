@@ -1,3 +1,6 @@
+hooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+
 cloning a repo => git clone <url>
 add a file to git => git add <fileName>
 status => git status
@@ -12,3 +15,6 @@ config user => git config --global user.name <name>
 git config --global user.email <email>
 
 
+
+
+goooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
