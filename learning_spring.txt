@@ -1,0 +1,12 @@
+============================== SPRING FRAMEWORK BASIC ======================================================================
+
+spring framwork provides patterns and structure for the java application.
+
+managing object life cycle and dependencies for the components and services in the code through
+the application context and through dependency injection.
+
+trditional standard way to connect to a database in java using JDBC. JDBC is painfull. 
+spring framework comes up with various different data access apis and mechanisms for 
+database connectivity , querying, transaction mangemnt and more by hiding JDBC.
+
+Spring framework comes with the web framework called spring MVC. Spring MVC lets create web application and rrestfull apis easily.
