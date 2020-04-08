@@ -2,52 +2,60 @@ package codelity;
 
 public class CyclicRotation {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
         int shiftNum = 3;
-        int[] array = {3, 8, 9, 7, 6};
+        int[] array = {};
 
-        //First rotation
-        for(int i=0; i < (array.length - shiftNum); i++){
-            if(i < shiftNum/2 ){
+        if(array.length == 0 || array == null){
+            System.out.println("not a valid input");
+        }
+        else{
+            shiftNum = shiftNum % array.length ;
+            int breakPoint = array.length - shiftNum;
+
+            //First rotation
+            for(int i=0; i < breakPoint; i++){
+                if(i < breakPoint/2 ){
+                    int tempValue = array[i];
+                    array[i] = array[(breakPoint-1) -i];
+                    array[(breakPoint-1) -i] = tempValue ;
+                }
+            }
+            for(int i=0; i < array.length; i++){
+                System.out.print(array[i] +", ");
+            }
+            System.out.println("===================================");
+
+
+            //Second rotation
+            for(int i= breakPoint; i < array.length; i++){
+                int num = (array.length+(breakPoint -1)) -i ;
                 int tempValue = array[i];
-                array[i] = array[((array.length - shiftNum)- 1)];
-                array[((array.length - shiftNum)- 1)] = tempValue ;
+
+                if(i < num ){
+                    array[i] = array[num];
+                    array[num] = tempValue ;
+                }
+            }
+            for(int i=0; i < array.length; i++){
+                System.out.print(array[i] +", ");
+            }
+            System.out.println("===================================");
+
+
+            //Third rotation
+            for(int i=0; i < array.length; i++){
+                if(i < array.length/2 ){
+                    int tempValue = array[i];
+                    array[i] = array[(array.length-1) -i];
+                    array[(array.length-1) -i] = tempValue ;
+                }
+            }
+
+            for(int i=0; i < array.length; i++){
+                System.out.print(array[i] +", ");
             }
         }
-        for(int i=0; i < array.length; i++){
-            System.out.print(array[i] +", ");
-        }
-        System.out.println("===================================");
-
-
-        //Second rotation
-        for(int i=array.length -1 ; i > array.length - shiftNum; i--){
-            int tempValue = array[i];
-
-            if(i < shiftNum/2 ){
-                array[array.length -1] = array[array.length - shiftNum];
-                array[array.length - shiftNum] = tempValue ;
-            }
-        }
-        for(int i=0; i < array.length; i++){
-            System.out.print(array[i] +", ");
-        }
-        System.out.println("===================================");
-
-
-        //Third rotation
-        for(int i=0; i < array.length; i++){
-            if(i < array.length/2 ){
-                int tempValue = array[i];
-                array[i] = array[(array.length-1) -i];
-                array[(array.length-1) -i] = tempValue ;
-            }
-        }
-
-        for(int i=0; i < array.length; i++){
-            System.out.print(array[i] +", ");
-        }
-
-        }
-
+    }
 }
